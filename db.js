@@ -2,8 +2,8 @@ const Sequelize = require('sequelize')
 
 const db = new Sequelize(
     'clientdb',
-    'root',
-    'dell1234',
+    'devuser',
+    'devuser',
     {
         dialect: 'mysql',
         host: 'localhost'
@@ -23,7 +23,9 @@ const Users = db.define('users',{
     name : Sequelize.STRING
 })
 
-db.sync()
+db.sync().then(()=>{
+    console.log("database is ready")
+})
 
 exports = module.exports = {
     db, Users

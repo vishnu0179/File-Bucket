@@ -23,10 +23,21 @@ const Users = db.define('users',{
     name : Sequelize.STRING
 })
 
+const Files = db.define('files',{
+    filename:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    owner :{
+        type : Sequelize.STRING,
+        allowNull: false
+    }
+})
+
 db.sync().then(()=>{
     console.log("database is ready")
 })
 
 exports = module.exports = {
-    db, Users
+    db, Users, Files
 }

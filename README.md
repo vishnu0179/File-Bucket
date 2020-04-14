@@ -1,4 +1,6 @@
-# LoginApi
+# FILE BUCKET
+
+### File bucket is a secure cloud storage api with which you can store your files in cloud and authenticate to access your files and media. It stores the files using aws S3.
 
 <b>POST Request to /signup </b> with EMAIL, PASSWORD, NAME in body.  
 Response: "Signed up successfully"
